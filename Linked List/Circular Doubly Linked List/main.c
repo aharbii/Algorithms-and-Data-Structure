@@ -153,7 +153,6 @@ int main()
 {
     int A[] = {1, 2, 3, 4, 5};
     create(A, 5);
-    reverse(head);
     display(head);
     return 0;
 }
