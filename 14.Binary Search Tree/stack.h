@@ -64,4 +64,27 @@ Node *stack_pop(Stack *s)
     return x;
 }
 
+Node *stack_peek(Stack s, int pos)
+{
+    int index = s.top - pos + 1;
+
+    if (index < 0)
+    {
+        printf("Warning: Invalid Position.\n");
+        return NULL;
+    }
+
+    return s.s[index];
+}
+
+Node *stack_top(Stack s)
+{
+    if (stack_is_empty(s))
+    {
+        return NULL;
+    }
+
+    return s.s[s.top];
+}
+
 #endif
